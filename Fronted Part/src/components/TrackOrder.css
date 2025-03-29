@@ -1,0 +1,131 @@
+*
+{
+  padding:0px;
+  margin:0px;
+}
+
+.trackOrderContainer
+{
+    width:100%;
+    height:500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.trackOrderContainer1
+{
+  width: 700px;
+  height: 300px;
+  background-color: rgb(255, 255, 255);
+  box-shadow:  0px 0px 15px 2px rgb(172, 171, 171);;
+  border-radius: 20px;
+}
+.tracker-title
+{
+  width: 700px;
+  height: 60px;
+  font-size: 30px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+
+.tracker-title .truck
+{
+  margin-bottom: 10px;
+  margin-left: 10px;
+  color: green;
+}
+.tracker-container {
+  position: relative;
+  width: 700px;
+  height: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+  
+  .tracker-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    max-width: 500px;
+    justify-content: space-between;
+  }
+  
+  .line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: gray;
+    transform: translateY(-50%);
+  }
+  
+  .progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 5px;
+    background: green;
+    width: 0%;
+    transition: width 1s linear;
+    transform: translateY(-50%);
+  }
+  .step {
+    width: 30px;
+    height: 30px;
+    background: gray;
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-left: 7px;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+  }
+  .firstStep
+  {
+    margin-left: 20px;
+  }
+  .secStep
+  {
+    margin-left: 20px;
+    color:grey;
+  }
+  .thirdStep
+  {
+    margin-left: 20px;
+    color:grey;
+  }
+
+  .firstStep.active
+  {
+     color: black;
+  }
+  .secStep.active
+  {
+    color: black;
+  }
+  .thirdStep.active
+  {
+    color: black;
+  }
+  .step.active {
+    background: green;
+  }
+
+  .div
+  {
+    width:700px;
+    height: 40px;
+    position: absolute;
+    bottom:315px;
+    right: 1000;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+  }

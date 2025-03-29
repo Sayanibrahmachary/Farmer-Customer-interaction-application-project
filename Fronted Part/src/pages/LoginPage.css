@@ -1,0 +1,201 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.wave {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+.containerLogin{
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap :7rem;
+	padding: 0 2rem;
+}
+.login-content {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+}
+.img {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.img img {
+	width: 500px;
+}
+
+.form {
+	width: 360px;
+}
+
+.login-content img {
+	height: 100px;
+}
+.i1-login {
+	color: #d9d9d9;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.i1-login i {
+	transition: .3s;
+}
+.login-content h2 {
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+
+.login-content h2 {
+	margin: 15px 0;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+
+.login-content .input-div-login {
+	position: relative;
+	display: grid;
+	grid-template-columns: 7% 93%;
+	margin: 25px 0;
+	padding: 5px 0;
+	border-bottom: 2px solid #d9d9d9;
+}
+
+.login-content .input-div-login.one {
+	margin-top: 0;
+}
+
+.input-div-login .i1-login {
+	padding: 10px;
+}
+
+.input-div-login .i1-login i {
+	font-size: 18px;
+	color: #999;
+	transition: 0.4s;
+}
+
+.input-div-login:focus-within .i1-login {
+	color: #44be2c;
+}
+
+.profilePic {
+	width: 100px;
+	border-radius: 50%;
+	animation: popIn 1s ease-in-out;
+}
+.form h2 {
+	margin: 15px 0;
+	font-size: 2rem;
+	color: #333;
+}
+.input-div-login {
+	position: relative;
+	display: flex;
+	align-items: center;
+	border-bottom: 2px solid #d9d9d9;
+	margin: 20px 0;
+	padding: 10px;
+	transition: 0.4s;
+}
+.input-div-login label {
+	position: absolute;
+	margin-left: 20px;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	color: #999;
+	transition: 0.4s;
+}
+.input-div-login input {
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	flex: 1;
+	background: none;
+	padding: 10px 0;
+}
+/* Ensuring the label moves up when input is focused or filled */
+.input-div-login input:focus + label, 
+.input-div-login input:not(:placeholder-shown) + label {
+	top: -10px;
+	font-size: 12px;
+	color: #44be2c;
+}
+.password{
+	display: block;
+	text-align: right;
+	text-decoration: none;
+	color: #999;
+	font-size: 0.9rem;
+	transition: .3s;
+	margin-bottom: 20px;
+}
+
+.password:hover{
+	color: #44be2c;
+}
+
+.login-content button {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	border-radius: 25px;
+	background-image: linear-gradient(to right,#44be2c, #44be2c, #66d338);
+	color: white;
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	background-position: right;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes slideIn {
+	from { transform: translateY(-50px); opacity: 0; }
+	to { transform: translateY(0); opacity: 1; }
+}
+@keyframes popIn {
+	from { transform: scale(0.5); opacity: 0; }
+	to { transform: scale(1); opacity: 1; }
+}
+/* Media queries for responsive design */
+@media (max-width: 900px) {
+	.container {
+		flex-direction: column;
+		padding: 30px;
+	}
+	.login-content {
+		width: 100%;
+		max-width: 400px;
+	}
+	.profilePic {
+		width: 80px;
+	}
+	h2 {
+		font-size: 1.8rem;
+	}
+	.btn {
+		padding: 15px;
+		font-size: 1rem;
+	}
+}

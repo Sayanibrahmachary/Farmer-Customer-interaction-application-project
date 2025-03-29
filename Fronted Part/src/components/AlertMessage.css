@@ -1,0 +1,36 @@
+*{
+    padding:0px;
+    margin: 0px;
+}
+
+.alertOuter{
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 20px;
+}
+
+.alertDiv
+{
+    height:50px;
+    width: 250px;
+    background-color: rgb(137, 240, 122);
+    position: relative;
+    animation: myfirst 3s linear;
+    right: -250px;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+
+@keyframes myfirst {
+    0%   { right: -270px; opacity: 0; } 
+    14%  { right: 0px; opacity: 1; } 
+    85%  { right: 0px; opacity: 1; } 
+    100% { right: -270px; opacity: 0; }
+}

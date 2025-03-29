@@ -1,0 +1,97 @@
+/* General Page Styling */
+.amount-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+/* Main Content */
+.content {
+    text-align: center;
+    transition: filter 0.3s ease-in-out;
+}
+
+.blur {
+    filter: blur(5px);
+}
+
+/* Button Styling */
+.btn1 {
+    margin-top: 7px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.btn1:hover {
+    background: #0056b3;
+}
+
+/* Overlay (Background Blur & Darken) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px); /* Blur Effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Popup Box */
+/* .popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+} */
+
+/* Input Fields */
+.popup input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Close Button */
+.close-btn {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background: darkred;
+}
+
+.amountButtons
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

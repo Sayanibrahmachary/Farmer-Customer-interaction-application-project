@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.items-cartItems .items-cartItems-li
+{
+    height: 70px;
+    width: 1050px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.items-cartItems .items-cartItems-li img
+{
+    height: 60px;
+    width: 60px;
+}
+
+.items-cartItems .items-cartItems-li p{
+    
+    margin-left: 50px;
+}
+
+.totalSum 
+{
+    height: 30px;
+    width: 1050px;
+    margin-left: 40px;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid black;
+}
+.totalSum2
+{
+    height: 30px;
+    width: 1090px;
+    display: flex;
+    justify-content: flex-end;
+}
+.totalSum h2{
+    margin-left: 185px;
+}
+.totalSum1
+{
+    height: 40px;
+    width: 1050px;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}

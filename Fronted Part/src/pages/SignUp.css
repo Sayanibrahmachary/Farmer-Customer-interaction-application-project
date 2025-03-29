@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.signUpForm
+{
+    width: 1535px;
+    height: 686px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to right,#85f66e, #71e85a, #81dc5a);
+}
+.formDiv
+{
+    width: 300px;
+    height: 400px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+.photo
+{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profilePic
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.bottomPart
+{
+    width: 300px;
+    height:230px;
+    display: grid;
+    justify-content: center;
+}
+
+.inputTag input
+{
+    width: 250px;
+    height: 30px;
+    flex: 1;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    background-color: whitesmoke;
+    border-bottom: 2px solid #070303;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.address input
+{
+    width: 250px;
+    height: 30px;
+    flex: 1;
+    margin-bottom: 10px;
+    padding-left: 5px;
+    background-color: whitesmoke;
+    border-bottom: 2px solid #070303;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
+}
+
+
+.inputTag input:focus,
+.address input:focus {
+    border-bottom: 2px solid rgb(40, 209, 40);
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    outline: none; /* Removes the default outline */
+}
+
+
+.role
+{
+    display: flex;
+}
+
+.role1
+{
+    width: 100px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.submitBtn
+{
+    margin-top: 20px;
+}
+
+.submitBtn p{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.submitBtn button
+{
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    background-image:  linear-gradient(to right,#44be2c, #44be2c, #66d338);
+    border: none;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
