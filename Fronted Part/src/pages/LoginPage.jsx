@@ -65,6 +65,7 @@ function LoginPage()
 
 				if(role=="Customer")
 				{
+					localStorage.setItem("paymentDone", "false");
 					setTimeout(() => {
 						setShowAlert(false);
 						navigate('/homePageCustomer',{
