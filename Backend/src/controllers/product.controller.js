@@ -188,45 +188,43 @@ const allComments = asyncHandler(async (req, res) => {
 //delete the yesterdays product 
 const deleteYesterdaysProducts = async () => {
     try {
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1); // Go back 1 day
-      yesterday.setHours(0, 0, 0, 0); // Start of yesterday
-  
-      const endOfYesterday = new Date();
-      endOfYesterday.setDate(yesterday.getDate());
-      endOfYesterday.setHours(23, 59, 59, 999); // End of yesterday
-  
-      // Delete products created yesterday
-    //   console.log("Yesterday Start:", yesterday);
-    //   console.log("Yesterday End:", endOfYesterday);
-    const deletedProducts = await Product.find({
-        createdAt: { $gte: yesterday, $lte: endOfYesterday },
-    });
+        const yesterday = new Date();
+        yesterday.setDate(yesterday.getDate() - 1); // Move to yesterday
+        yesterday.setHours(0, 0, 0, 0); // Start of yesterday
 
-    if (deletedProducts.length > 0) {
-        const productIds = deletedProducts.map((product) => product._id);
+        const endOfYesterday = new Date(yesterday);
+        endOfYesterday.setHours(23, 59, 59, 999); // End of yesterday
 
-        // Delete associated comments
-        const deleteCommentsResult = await Comment.deleteMany({ productId: { $in: productIds } });
-        console.log(`Deleted ${deleteCommentsResult.deletedCount} comments related to yesterday's products.`);
+        // Find and delete all products created yesterday
+        const productsToDelete = await Product.find({
+            createdAt: { $gte: yesterday, $lte: endOfYesterday }
+        });
 
-        // Delete the products themselves
-        const deleteProductsResult = await Product.deleteMany({ _id: { $in: productIds } });
-        console.log(`Deleted ${deleteProductsResult.deletedCount} products from yesterday.`);
-    } else {
-        console.log("No products to delete from yesterday.");
-    }
+        if (productsToDelete.length > 0) {
+            const productIds = productsToDelete.map((product) => product._id);
+
+            // Delete associated comments first
+            const deleteCommentsResult = await Comment.deleteMany({ productId: { $in: productIds } });
+            console.log(`Deleted ${deleteCommentsResult.deletedCount} comments related to yesterday's products.`);
+
+            // Delete the products themselves
+            const deleteProductsResult = await Product.deleteMany({ _id: { $in: productIds } });
+            console.log(`Deleted ${deleteProductsResult.deletedCount} products created yesterday.`);
+        } else {
+            console.log("No products to delete from yesterday.");
+        }
     } catch (error) {
         console.error("Error deleting yesterday's products and comments:", error);
     }
 };
 
-// Schedule the function to run at 12 AM daily
-deleteYesterdaysProducts();
+// Schedule the function to run exactly at 12 AM every day
 cron.schedule("0 0 * * *", () => {
-  console.log("Running deleteYesterdaysProducts at 12 AM...");
-  deleteYesterdaysProducts();
-});
+    console.log("Running deleteYesterdaysProducts at 12 AM...");
+    deleteYesterdaysProducts();
+}, { timezone: "UTC" });  // Adjust timezone if needed
+
+
 
 
 export {

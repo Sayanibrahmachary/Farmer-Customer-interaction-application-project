@@ -234,8 +234,9 @@ import { asyncHandler } from "../utils/asyncHandler.js";
      }
  })
  
+
  //check that user is valid or not
- const useingPinCheckUser=asyncHandler(async(req,res)=>
+const useingPinCheckUser=asyncHandler(async(req,res)=>
  {
      const {deliveryBoyId,pinByParams}=req.params;
      const {pinByCustomer}=req.body;
@@ -252,7 +253,7 @@ import { asyncHandler } from "../utils/asyncHandler.js";
  
      const order = await Order.findOne({
          deliveryBoyId: new mongoose.Types.ObjectId(deliveryBoyId),
-         isDeliverd:false,
+
      });
  
      if (!order) {
@@ -270,45 +271,117 @@ import { asyncHandler } from "../utils/asyncHandler.js";
      return res
      .status(200)
      .json(new ApiResponse(200,"order reached to the customer successfully"));
- })
+})
  
- const bookDeliveryBoy=asyncHandler(async(req,res)=>
+
+//get the map so that he can put the destination
+const bookDeliveryBoy=asyncHandler(async(req,res)=>
  {
-     const {customerId}=req.params;
-     const customer = await Customer.findById(customerId);
-     if (!customer) {
-         throw new ApiError(404, "Customer not found");
-     }
-     const customerCity=customer.city;
-     const allDeliveryBoys = await DeliveryBoy.find({ status: "available" });
- 
-     // Filter delivery boys whose address matches the customer's address
-     const matchedDeliveryBoys = allDeliveryBoys.filter(
-         (boy) => boy.city === customerCity
-     );
- 
-     if (matchedDeliveryBoys.length === 0) {
-         throw new ApiError(400, "No delivery boy available for this address");
-     }
- 
-     // Randomly select a delivery boy
-     const randomIndex = Math.floor(Math.random() * matchedDeliveryBoys.length);
-     const assignedDeliveryBoy = matchedDeliveryBoys[randomIndex];
-     assignedDeliveryBoy.status = "busy";
-     await assignedDeliveryBoy.save();
- 
-     return res
-     .status(200)        
-     .json(new ApiResponse(200,assignedDeliveryBoy,'Delivery boy booked successfully'));
- })
- //get the map so that he can put the destination
- 
- export {
-     registerDeliveryBoy,
-     logInDeliveryBoy,
-     logOutDeliveryBoy,
-     changePasswordDeliveryBoy,
-     refreshAccessToken,
-     useingPinCheckUser,
-     bookDeliveryBoy,//pending to run
- }
+    const { customerId, orderId } = req.params; // Assuming orderId is passed in params
+    const customer = await Customer.findById(customerId);
+    if (!customer) {
+        throw new ApiError(404, "Customer not found");
+    }
+    
+    const customerCity = customer.city;
+    const allDeliveryBoys = await DeliveryBoy.find({ status: "available" });
+
+    console.log("Sayani");
+    // Filter delivery boys whose city matches the customer's city
+    const matchedDeliveryBoys = allDeliveryBoys.filter(
+        (boy) => boy.city === customerCity
+    );
+
+    if (matchedDeliveryBoys.length === 0) {
+        throw new ApiError(400, "No delivery boy available for this address");
+    }
+
+    // Randomly select a delivery boy
+    const randomIndex = Math.floor(Math.random() * matchedDeliveryBoys.length);
+    const assignedDeliveryBoy = matchedDeliveryBoys[randomIndex];
+    
+    assignedDeliveryBoy.status = "busy";
+    await assignedDeliveryBoy.save();
+
+    // Update the order with the assigned delivery boy's ID
+    const order = await Order.findById(orderId);
+    if (!order) {
+        throw new ApiError(404, "Order not found");
+    }
+
+    order.deliveryBoyId = assignedDeliveryBoy._id;
+    await order.save();
+
+    return res
+        .status(200)
+        .json(new ApiResponse(200, assignedDeliveryBoy, "Delivery boy booked successfully"));
+    
+})
+
+
+const todaysAllOrder = asyncHandler(async (req, res) => {
+    const { deliveryBoyId } = req.params;
+
+    if (!isValidObjectId(deliveryBoyId)) {
+        throw new ApiError(400, "Invalid DeliveryBoyId");
+    }
+
+    const todaysAllOrder = await DeliveryBoy.aggregate([
+        {
+            $match: { _id: new mongoose.Types.ObjectId(deliveryBoyId) }
+        },
+        {
+            $lookup: {
+                from: "orders",
+                localField: "_id",
+                foreignField: "deliveryBoyId",
+                as: "orders"
+            }
+        },
+        { $unwind: "$orders" }, // Unwind to process each order separately
+        { $replaceRoot: { newRoot: "$orders" } }, // Replace root with order details
+        {
+            $lookup: {
+                from: "products",
+                localField: "productId",
+                foreignField: "_id",
+                as: "productDetails"
+            }
+        },
+        { $unwind: { path: "$productDetails", preserveNullAndEmptyArrays: true } }, // Unwind if products exist
+        {
+            $lookup: {
+                from: "customers",
+                localField: "customerId",
+                foreignField: "_id",
+                as: "customerDetails"
+            }
+        },
+        { $unwind: { path: "$customerDetails", preserveNullAndEmptyArrays: true } }, // Unwind if customer exists
+        {
+            $project: {
+                _id: 1,
+                productName: "$productDetails.productName",
+                photo: "$productDetails.photo",
+                pay: "$productDetails.pay",
+                address: "$customerDetails.address",
+                phoneNumber: "$customerDetails.phoneNumber",
+            }
+        }
+    ]);
+
+    return res.status(200).json(new ApiResponse(200, todaysAllOrder, "Fetched all orders successfully"));
+});
+
+
+export {
+    registerDeliveryBoy,
+    logInDeliveryBoy,
+    logOutDeliveryBoy,
+    changePasswordDeliveryBoy,
+    refreshAccessToken,
+    useingPinCheckUser,
+    bookDeliveryBoy,
+    todaysAllOrder,
+}
+

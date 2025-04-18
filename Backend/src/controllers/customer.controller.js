@@ -359,14 +359,6 @@ import {asyncHandler} from "../utils/asyncHandler.js";
      );
  })
  
- 
- //total bill by this customer
- const totalBillByThisCustomer=asyncHandler(async(req,res)=>
- {
- 
- })
- 
- 
  export {
      registerCustomer,
      logInCustomer,

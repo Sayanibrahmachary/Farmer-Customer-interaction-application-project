@@ -9,10 +9,11 @@ import mongoose, { isValidObjectId } from "mongoose";
  {
      const {description}=req.body;
      const {productId}=req.params;
-     //console.log(description);
+    
+     console.log(description);
      if(description=="")
      {
-         throw new ApiError(400,"Comment is required");
+        throw new ApiError(400,"Comment is required");
      }
  
      if(!isValidObjectId(productId))

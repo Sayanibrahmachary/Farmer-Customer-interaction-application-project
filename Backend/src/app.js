@@ -97,7 +97,7 @@ app.post("/api/v1/payment/create-checkout-session", async (req, res) => {
             cancel_url: "http://localhost:5173/cancel",
         });
 
-        console.log("✅ Stripe Session Created:", session);
+        //console.log("✅ Stripe Session Created:", session);
         res.json({ id: session.id });
     } catch (error) {
         console.error("❌ Stripe Checkout Error:", error);
