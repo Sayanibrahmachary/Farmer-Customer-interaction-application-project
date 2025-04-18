@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faIndianRupeeSign, faUser } from "@fortawesome/free-solid-svg-icons";
 import './ChangePassword.css';
 
 function CreateProduct() {
@@ -69,7 +69,7 @@ function CreateProduct() {
 
                         <div className="input-div-login">
                             <div className="i1-login">
-                                <FontAwesomeIcon icon={faLock} />
+                                <FontAwesomeIcon icon={faIndianRupeeSign} />
                             </div>
                             <input type="number" placeholder="Product Price" required onChange={(e) => setPrice(e.target.value)} />
                         </div>

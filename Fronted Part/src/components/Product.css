@@ -35,7 +35,7 @@
     margin-right: 10px;
     color: #fc8804;
 }
-.addtoCar button
+#addtoCart
 {
     width: 210px;
     height: 40px;
@@ -69,4 +69,8 @@
     width: 75px;
     height: 20px;
     object-fit: contain;
+}
+.commentIcon
+{
+    margin-right: 10px;
 }

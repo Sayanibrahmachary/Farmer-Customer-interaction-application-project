@@ -4,12 +4,14 @@ import {faComment} from '@fortawesome/free-regular-svg-icons';
 import './AllProduct.css';
 import UpdateProduct from "./UpdateProduct.jsx";
 import DeleteProduct from "./DeleteProduct.jsx";
-
+import AllCommentsFarmer from "./AllCommentsFarmer.jsx";
 
 function AllProduct({productId,photo,productName,price,farmerId})
 {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpenDelete, setIsDelete]=useState(false);
+    const [isOpenComments, setIsOpenComments] = useState(false);
+    const [comments,setComments]=useState([]);
 
     function handleProductUpdate()
     {
@@ -32,13 +34,45 @@ function AllProduct({productId,photo,productName,price,farmerId})
       event.stopPropagation();
       setIsDelete(false);
     }
+
+    const handleComment=async()=>
+    {
+       try{
+
+          const response=await fetch(`http://localhost:8000/api/v1/product/allComments/${productId}`,{
+            method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+          })
+        
+        if (!response.ok) {
+          const error = await response.json();
+          console.error("Error:", error.message);
+          alert(`Fetching all comments: ${error.message}`);
+          return;
+        }
+
+        const result = await response.json();
+        console.log("📦 all comments successfully:", result);
+        setComments(result.data);
+        setIsOpenComments(true);
+        alert("fetched all comments successfully!");
+       }
+       catch(e)
+       {
+          console.error(e);
+          alert(`An error occurred while fetching all the comments`);
+       }
+    }
+
     return(
         <>
             <div className="product">
                 <img className="bigImage" src={photo}/>
                 <div className="productName">
                   <h4>{productName}</h4>
-                  <FontAwesomeIcon icon={faComment} />
+                  <FontAwesomeIcon icon={faComment} onClick={handleComment} className="commentIcon"/>
                 </div>
                 <div className="veg-qoute">
                   <p>Healthy and nutrient-rich.</p>
@@ -70,6 +104,12 @@ function AllProduct({productId,photo,productName,price,farmerId})
                         <DeleteProduct closePopup={closePopupDelete} productId={productId}/>
                     </div>
                 </div>
+            )}
+
+            {/* All comments */}
+            {isOpenComments && 
+            (
+              <AllCommentsFarmer comments={comments} setIsOpenComments={setIsOpenComments} productId={productId}/>
             )}
         </>
     )

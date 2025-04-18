@@ -60,6 +60,9 @@ function LoginPage()
 				console.log("Login Successful:", result);
 				// console.log(result.data.accessToken);
 				localStorage.setItem("token", result.data.accessToken);
+				const token =localStorage.getItem("token");
+				console.log(token);
+				
 				setalertMessage("Login Successfull");
 				setShowAlert(true);
 
@@ -98,7 +101,6 @@ function LoginPage()
 						setShowAlert(false);
 						navigate('/homePageDeliveryBoy',{
 
-							
 							state:{
 								username: result.data.user.username,
 								id:result.data.user._id,

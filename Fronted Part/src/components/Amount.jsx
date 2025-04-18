@@ -3,8 +3,6 @@ import "./Amount.css"; // Import external CSS
 
 export default function Amount({ closePopup ,productId,customerId}) {
 
-    // console.log(productId);
-    // console.log(customerId);
     const [amount,setamount]=useState(null);
     const [kgOrg,setKgOrG]=useState("");
 
@@ -32,10 +30,10 @@ export default function Amount({ closePopup ,productId,customerId}) {
 			else{
 				const result = await response.json();
 				console.log("Order placed successfully", result);
+                localStorage.setItem("orderId", result.data._id);
 				alert("We take your order Successfully now go to the todays order section and done the payment");
 			}
         }
-
         catch(e)
         {
             console.error(e);

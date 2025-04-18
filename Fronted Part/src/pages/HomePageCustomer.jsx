@@ -37,7 +37,7 @@ function HomePageCustomer()
 
 
     const customerId = localStorage.getItem("customerId");
-    const name=localStorage.getItem("username");
+    const name=localStorage.getItem("customerName");
     return(
         <>
             <div className={`wholeHomepage ${isMenuOpen ? "menu-open" : "menu-closed"}`}>
@@ -83,22 +83,6 @@ function HomePageCustomer()
                             <FontAwesomeIcon icon={faTrash} className="homeIcon" />
                             <p>Log out</p>
                         </div>
-                        
-                        {/* <!-- ////// Farmer Part ////// -->
-                         <!-- 1) home
-                         2) changepassword 
-                         3) create product 
-                         4) delete product
-                         5) update product
-                         6) total order
-                         7) which product have most order -->
-                        
-                        
-                        <!-- ////// Delivery Boy //////
-                        1) home
-                        2) changepassword
-                        3) todays all order -->
-                         */}        
 
                     </div>
                 </div>

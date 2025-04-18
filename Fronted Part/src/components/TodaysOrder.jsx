@@ -2,7 +2,6 @@ import React,{useEffect, useState} from "react";
 import  './TodaysOrder.css';
 import CartItems from "./CartItems";
 import { loadStripe } from "@stripe/stripe-js"; 
-import Success from "./Success";
 
 function TodaysOrder({id})
 {
