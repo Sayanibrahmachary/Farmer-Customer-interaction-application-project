@@ -41,3 +41,7 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - After logging in or signing up, customers are redirected to their personalized dashboard where they can browse products, place orders, and track their activity.
      
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/HomePageCustomer.png)
+#### Select amount page
+   - Choose the quantity or amount and also choose in kilograms or grams of the product you want to purchase
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/SelectAmount.png)
