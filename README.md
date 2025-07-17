@@ -14,8 +14,8 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - In today’s busy lifestyle, many people don’t have the time to visit local markets. This system offers a convenient way for them to purchase fresh produce online, directly from the source.
 
 3. Better Pricing and Market Reach for Farmers
-Farmers often struggle with limited market access and unfair pricing. This project empowers them by providing a digital marketplace where they can reach more customers and set their own prices.
+   - Farmers often struggle with limited market access and unfair pricing. This project empowers them by providing a digital marketplace where they can reach more customers and set their own prices.
 
 4. Transparency and Trust in the Food Chain
-By enabling direct communication between farmers and customers, the system increases trust, encourages sustainable practices, and builds a stronger connection between the people who grow food and those who consume it.
+   - By enabling direct communication between farmers and customers, the system increases trust, encourages sustainable practices, and builds a stronger connection between the people who grow food and those who consume it.
 
