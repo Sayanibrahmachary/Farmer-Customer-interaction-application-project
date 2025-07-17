@@ -57,3 +57,11 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - Once the payment is completed, a delivery boy is automatically assigned to your order. You will also receive a unique PIN code, which you must share with the delivery boy upon delivery to ensure secure and verified order handoff.
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/PaymentDonePage.png)
+#### Change Password Page
+   -  Use this page to Change Your Password
+
+   -  ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/ChangePasswordPage.png)
+#### Logout Page
+   - Use this page to securely log out of your account and end your session on the platform.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/LogoutPage.png)
