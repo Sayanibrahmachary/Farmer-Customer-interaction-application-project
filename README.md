@@ -19,3 +19,6 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
 ### 4. Transparency and Trust in the Food Chain
    - By enabling direct communication between farmers and customers, the system increases trust, encourages sustainable practices, and builds a stronger connection between the people who grow food and those who consume it.
 
+## Screenshots
+#### Home Page
+![A welcoming overview of the platform, providing easy navigation to order products](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/homePage.png)
