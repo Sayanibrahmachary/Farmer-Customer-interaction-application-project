@@ -45,3 +45,11 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - Choose the quantity or amount and also choose in kilograms or grams of the product you want to purchase
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/SelectAmount.png)
+#### Oder Page 
+   - Here you can review the products you've selected, confirm the order details, and proceed to make the payment.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/TodaysOrder.png)
+#### Payment Page
+   - Enter your payment details and complete the transaction securely to place your order.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/PaymentPage.png)
