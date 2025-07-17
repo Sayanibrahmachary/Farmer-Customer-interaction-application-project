@@ -61,7 +61,19 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    -  Use this page to Change Your Password
 
    -  ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/ChangePasswordPage.png)
+#### Track Your Order
+   - Use this page to Track your Order
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/TrackOrder.png)
 #### Logout Page
    - Use this page to securely log out of your account and end your session on the platform.
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/LogoutPage.png)
+#### Home Page for Farmers Or Sellers
+   - After logging in or signing up, sellers are redirected to their personalized dashboard where they can see all todays create products, sell their products.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/HomePageFarmer.png)
+#### Update Product
+   - Use this page to Update your products details
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/UpdateProduct.png)
