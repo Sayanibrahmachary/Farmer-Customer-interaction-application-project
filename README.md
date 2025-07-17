@@ -7,7 +7,7 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
 - For Payment: STRIPE
 - Tools: VS CODE, POSTMAN
 ## Why i choose this project ? 
-1. Direct Farmer-to-Customer Connection
+#### 1. Direct Farmer-to-Customer Connection
    - This platform removes middlemen, allowing farmers to sell their products directly to customers. This promotes fair trade and ensures farmers receive a better and more     deserving profit for their hard work.
 
 2. Time-Saving for Busy Customers
