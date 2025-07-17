@@ -22,9 +22,14 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
 ## Screenshots
 #### Home Page
    - A welcoming overview of the platform, providing easy navigation to order products
+   - 
 ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/homePage.png)
 
 #### Select Role
    - Here you have to select a role based on this you can enter in this webpage
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/selectRolePage.png)
+#### Sign Up Page
+   - Fill out the registration form with your details to create a new account based on your selected role (Farmer, Customer, or Delivery Boy).
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/SignUpPage.png)
