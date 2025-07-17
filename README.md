@@ -77,3 +77,11 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - Use this page to Update your products details
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/UpdateProduct.png)
+#### Delete Product
+   - Use this page to delete your products
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/DeleteProduct.png)
+#### Create Products
+   - Use this page to add new products by entering details like name, price, description, and image. This allows farmers to list their produce for customers to view and purchase.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/CreateProductPage.png)
