@@ -21,4 +21,5 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
 
 ## Screenshots
 #### Home Page
-![A welcoming overview of the platform, providing easy navigation to order products](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/homePage.png)
+   - A welcoming overview of the platform, providing easy navigation to order products
+![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/homePage.png)
