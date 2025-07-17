@@ -79,9 +79,7 @@ function SignUpCustomer()
                                     <div className="firstDiv">
                                         <h2>Sign up</h2>
                                     </div>
-                                    <div className="line">
-                                        <p>Sign up to Continue</p>
-                                    </div>
+                                    <p>Sign up to Continue</p>
                                 </div>
                                 <div className="input-div">
                                     <div className="i1"> 
@@ -138,7 +136,6 @@ function SignUpCustomer()
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>

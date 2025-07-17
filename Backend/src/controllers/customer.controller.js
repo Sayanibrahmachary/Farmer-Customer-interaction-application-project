@@ -120,7 +120,7 @@ import {asyncHandler} from "../utils/asyncHandler.js";
      const user=await Customer.findOne({email});
      if(!user)
      {
-         throw new ApiError(404,"user is not found");
+        throw new ApiError(404,"user is not found");
      }
  
      const ispassword = await user.isPasswordCorrect(password)

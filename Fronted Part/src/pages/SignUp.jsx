@@ -50,7 +50,7 @@ function SignUp()
                     
                         <div className="submitBtn">
                             <button type="submit" onClick={handle}>Submit</button>
-                            <p>Already have an account?<NavLink to="/logIn">login</NavLink></p>
+                            <p>Already have an account?   <NavLink to="/logIn">login</NavLink></p>
                         </div>
                     </div>
                 </div>

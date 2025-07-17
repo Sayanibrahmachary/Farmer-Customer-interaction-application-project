@@ -15,6 +15,7 @@ function AllComments({ comments ,setIsOpenComments, productId}) {
     setMsg(message);       // Put message back in input
     setIsEditing(true);  
   }
+  
   const handleMsg=async()=> {
     if (isEditing) {
       // Update mode
@@ -154,6 +155,7 @@ function AllComments({ comments ,setIsOpenComments, productId}) {
       alert(`Error occur in the time of delete the comment in database`);
     }
   }
+
   function handleVisible() {
     setVisible(!visible);
     setIsOpenComments(!visible);

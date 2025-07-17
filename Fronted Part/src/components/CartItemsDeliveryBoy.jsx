@@ -119,7 +119,7 @@ function CartItemsDeliveryBoy({setOrders,deliveryBoyId})
                             <img src={item.photo} alt={item.name} className="product-img" />
                           </td>
                           <td>{item.productName}</td>
-                          <td className="DeliveryBoy-pay">rs.{item.pay}</td>
+                          <td className="DeliveryBoy-pay">rs.53</td>
                           <td>{item.address}</td>
                           <td>{item.phoneNumber}</td>
                           <td>

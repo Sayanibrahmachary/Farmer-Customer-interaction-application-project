@@ -57,6 +57,7 @@ const orderPlaced=asyncHandler(async(req,res)=>
 const cancelOrder=asyncHandler(async(req,res)=>
 {
     const {orderId}=req.params;
+    //console.log(orderId);
 
     if(!isValidObjectId(orderId))
     {

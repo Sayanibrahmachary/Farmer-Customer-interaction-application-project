@@ -1,6 +1,5 @@
-import React from "react";
 import './HomePage.css';
-import {NavLink,Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 function HomePage()
 {
@@ -9,7 +8,7 @@ function HomePage()
             <div className="video-container">
 		        <video autoPlay muted loop>
 		        	<source src="./src/assets/heroSectionVideo.mp4" type="video/mp4"/>
-		        	Your browser does not support the video tag.
+		        	 Your browser does not support the video tag.
 		        </video>
 		        <div className="navBar">
 		        	<div className="navBar1">

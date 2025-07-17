@@ -55,6 +55,7 @@
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-right: 2px solid white;
+    color: #070303;
 }
 
 .address input
@@ -69,6 +70,7 @@
     border-top: 2px solid white;
     border-left: 2px solid white;
     border-right: 2px solid white;
+    color: #070303;
 }
 
 
@@ -86,6 +88,9 @@
 {
     display: flex;
 }
+.role p{
+    color: #070303;
+}
 
 .role1
 {
@@ -102,6 +107,7 @@
 .submitBtn p{
     margin-left: 10px;
     margin-top: 5px;
+    color: #070303;;
 }
 
 .submitBtn button

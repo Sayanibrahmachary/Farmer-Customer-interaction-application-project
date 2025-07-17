@@ -59,6 +59,5 @@ export default function Amount({ closePopup ,productId,customerId}) {
                 </div>
             </div>
         </div>
-        
     );
 }

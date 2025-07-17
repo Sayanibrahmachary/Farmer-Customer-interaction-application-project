@@ -178,12 +178,8 @@
 .firstDiv h2{
     font-size: 30px;
 }
-.line
-{
-    width: 500px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
+.upperText p{
+    margin-left: 180px;
 }
 
 .line p{
