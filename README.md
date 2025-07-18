@@ -65,6 +65,10 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - Use this page to Track your Order
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/TrackOrder.png)
+#### Comment on Product
+   - Use this page to leave a comment about a product. You can also view other users' comments to help you decide before making a purchase.
+     
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/CustomerCommentsPage.png)
 #### Logout Page
    - Use this page to securely log out of your account and end your session on the platform.
 
@@ -85,3 +89,15 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - Use this page to add new products by entering details like name, price, description, and image. This allows farmers to list their produce for customers to view and purchase.
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/CreateProductPage.png)
+#### Product Comments
+   - Farmers or sellers can view all comments related to the product here.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/CommentsOfAProduct.png)
+#### Home Page of Delivery Boy
+   - After logging in or signing up, sellers are redirected to their personalized dashboard where they can see all todays orders, change password, track orders, logout.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/HomePageDeliveryBoy.png)
+#### Enter PIN Number
+   - Please enter the PIN provided to the customer at the time of payment.
+
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/EnterPin.png)
