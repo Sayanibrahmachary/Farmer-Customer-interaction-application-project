@@ -101,3 +101,12 @@ Farmer-Customer Interaction System is a web-based platform that connects local f
    - Please enter the PIN provided to the customer at the time of payment.
 
    - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/EnterPin.png)
+#### Google Map
+   - This can be beneficial for the delivery person to track the delivery location.
+     
+   - ![](https://github.com/Sayanibrahmachary/Farmer-Customer-interaction-application-project/blob/main/Assets/GoogleMapPage.png)
+## Future Plans
+   - Expand the platform beyond just vegetables — allowing housewives and small-scale producers to sell homemade items like ghee, pickles, spices, and other local products.
+   - Create separate sections within the platform for different product categories (e.g., Vegetables, Dairy, Homemade Items, etc.) to improve browsing and discovery.
+   - Integrate an in-app chat or messaging system so customers and farmers can communicate in real-time for queries, custom orders, and better trust.
+   - Build a mobile application version of the platform (Android & iOS) for broader accessibility, especially for farmers in rural areas with smartphones.
